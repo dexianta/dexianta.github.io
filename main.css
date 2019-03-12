@@ -1,0 +1,27 @@
+.mainbk {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.inner {
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+.text {
+    color:#00ba4d;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1.1em;
+}
+
+.text:focus {
+    outline-width: 0;
+}
+
+input[type="text"]
+{
+    font-size:1.1em;
+}
