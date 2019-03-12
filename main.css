@@ -34,3 +34,7 @@ input[type="text"]
 p{
     margin: 2px;
 }
+
+a {
+    color: white;
+}
