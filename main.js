@@ -33,7 +33,7 @@ var youtube =
     "<p>exurb1a</p>" + 
     "<p>Kurzgesagt – In a Nutshell</p>" + 
     "<p>Jon Gjengset</p>" + 
-    "<p>...</p>" + 
+    "<p>...</p>"
 
 $('#inputform').submit(function(e) {
     e.preventDefault()
