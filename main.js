@@ -53,7 +53,7 @@ async function initial_loading() {
         console.log(pp)
         $("#inital-loading").append(pp)
     }
-    $("#inital-loading").append("<p>for more infomation try help :)</p>")
+    $("#inital-loading").append("<p>for all available command, try help :) </p>")
     $("#rotating").text("done")
 }
 
