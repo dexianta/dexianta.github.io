@@ -1,6 +1,3 @@
-var inputContent
-var still_loading = true
-
 var initial_content = [
     "<p>welcome, stranger<p><br>",
     
@@ -12,17 +9,30 @@ var initial_content = [
     "<p>he dropped out from grad school</p><br>"
 ]
 
+var commands_cache = []
+
+var help =
+    "<div class='text'>" +
+    "<p>cv ............. Download CV</p>" + 
+    "<p>interest ....... Dexian's interest</p>" + 
+    "<p>email .......... Email address of dexian tang</p>" + 
+    "<p>instagram ...... Dexian's instagram account</p>" + 
+    "</div>"
+
 $('#inputform').submit(function(e) {
     e.preventDefault()
-    inputContent = $("#input-content").val()
+    let inputContent = $("#input-content").val()
     $("#input-content").val("")
     $("#history").append("<p> ~/dexian $: " + inputContent + "</p>")
+    $("#history").append(processCmd(inputContent))
 })
 
 function processCmd(cmd) {
     switch(cmd) {
-        case "cv":
-            return 
+        case "help":
+            return help
+        default:
+            return `<p>command${cmd} is not found, or not supported yet`
     }
 }
 
@@ -33,17 +43,31 @@ function sleep(ms) {
 
 async function rotating_bar(circling_total) {
     let idx = 0;
+    let total = 40;
     while(idx <= circling_total) {
-        console.log("in while ", idx)
         let s = idx % 3
         let bar;
         if (s == 0) bar = "/"
         else if (s == 1) bar = "--"
         else bar = "\\"
-        $("#rotating").text(bar)
+
+        let progress = Math.floor((idx * 1.0 / circling_total) * total)
+        $("#rotating").text(getProgressBar(progress, total, bar))
         await sleep(300)
         idx = idx + 1
     }
+}
+
+function getProgressBar(progress, total, end) {
+    let content = [">"]
+    for (let i = 0; i < total; i++) {
+        if (i < progress)
+            content.unshift("=")
+        else
+            content.push(".")
+    }
+    content.push(end)
+    return content.join("")
 }
 
 async function initial_loading() {
@@ -58,7 +82,3 @@ async function initial_loading() {
 }
 
 initial_loading()
-// function cv() {
-//     return "<p>Dexian Tang holds a B.E. from University of Electronic Science and Technology of China.</p>" +
-
-// }
