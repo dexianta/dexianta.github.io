@@ -1,7 +1,7 @@
 var initial_content = [
     "<p>hello, stranger<p><br>",
     
-    "<p>Dexian Tang(唐 德先) is currently a data engineer @ <a target='_blank' href='https://www.yokozunadata.com'>Yokozuna Data</a></p>" + 
+    "<p>Dexian Tang (唐 德先) is currently a data engineer @ <a target='_blank' href='https://www.yokozunadata.com'>Yokozuna Data</a></p>" + 
     "<p>where he spending most of his time crunching numbers with spark</p>" + 
     "<p>before that, he worked briefly on a marketing platform at a marketing company</p><br>",
 
@@ -64,7 +64,7 @@ function processCmd(cmd) {
             return youtube
 
         default:
-            return `<p>command${cmd} is not found, or not supported yet`
+            return `<p>command ${cmd} is not found, or not yet supported`
     }
 }
 
@@ -75,7 +75,7 @@ function sleep(ms) {
 
 async function rotating_bar(circling_total) {
     let idx = 0;
-    let total = 40;
+    let total = 37;
     while(idx <= circling_total) {
         let s = idx % 3
         let bar;
