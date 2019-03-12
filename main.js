@@ -25,6 +25,8 @@ $('#inputform').submit(function(e) {
     $("#input-content").val("")
     $("#history").append("<p> ~/dexian $: " + inputContent + "</p>")
     $("#history").append(processCmd(inputContent))
+
+    window.scrollTo(0, document.body.scrollHeight)
 })
 
 function processCmd(cmd) {
