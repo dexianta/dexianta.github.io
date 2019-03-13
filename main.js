@@ -1,6 +1,6 @@
 var initial_content = [
     
-    "<p>barebone terminal (v0.0.1)<p>" + 
+    "<p><strike>barebone terminal (v0.0.1)</strike><p>" + 
     `<p>${(new Date()).toString()}</p>` +  
     "<p>hello, stranger<p><br>", 
     
