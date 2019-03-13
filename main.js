@@ -1,5 +1,8 @@
 var initial_content = [
-    "<p>hello, stranger<p><br>",
+    
+    "<p>barebone terminal (v0.0.1)<p>" + 
+    `<p>${(new Date()).toString()}</p>` +  
+    "<p>hello, stranger<p><br>", 
     
     "<p>Dexian Tang(唐 德先) is currently a data engineer @ <a target='_blank' href='https://www.yokozunadata.com'>Yokozuna Data</a></p>" + 
     "<p>where he spending most of his time crunching numbers with spark</p>" + 
@@ -109,7 +112,7 @@ async function initial_loading() {
         console.log(pp)
         $("#inital-loading").append(pp)
     }
-    $("#inital-loading").append("<p>for all available command, try help :) </p>")
+    $("#inital-loading").append("<p>for all available command: type \"help\" </p>")
     $("#rotating").text("done")
 }
 
