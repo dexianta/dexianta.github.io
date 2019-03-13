@@ -106,10 +106,8 @@ function getProgressBar(progress, total, end) {
 }
 
 async function initial_loading() {
-    console.log("inital loading!!");
     for (let pp of initial_content) {
         await rotating_bar(Math.random() * 5 + 3);
-        console.log(pp)
         $("#inital-loading").append(pp)
     }
     $("#inital-loading").append("<p>for all available command: type \"help\" </p>")
