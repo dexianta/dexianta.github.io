@@ -23,6 +23,8 @@ var help =
     "<p>code ........... Coding related interests</p>" + 
     "<p>music .......... Some great bands or musicians</p>" + 
     "<p>youtube ........ Some great channels you should check out</p>" + 
+    "<br>" +
+    "<p>clear .......... clear screen</p>" + 
     "</div>"
 
 var music = 
@@ -65,6 +67,10 @@ function processCmd(cmd) {
 
         case "youtube":
             return youtube
+
+        case "clear":
+            $("#history").empty()
+            return "";
 
         default:
             return `<p>command ${cmd} is not found, or not yet supported`
