@@ -8,8 +8,8 @@ var initial_content = [
     "<p>where he spending most of his time crunching numbers with spark</p>" + 
     "<p>before that, he worked briefly on a marketing platform at a marketing company</p><br>",
 
-    "<p>he spent three years @ <a target='_blank' href='http://www.ssc.pe.titech.ac.jp/'>Tokyo Tech</a> building IC chips, only to find out software is more of his thing</p>" + 
-    "<p>he dropped out from grad school with a master degree in Electronic Engineering</p><br>"
+    "<p>he spent three years @ <a target='_blank' href='http://www.ssc.pe.titech.ac.jp/'>Tokyo Tech</a> building circuits</p>" + 
+    "<p>he evetually pivoted to code and dropped out from grad school with a master degree in Electronic Engineering</p><br>"
 ]
 
 var commands_cache = []
