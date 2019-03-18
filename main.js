@@ -28,10 +28,14 @@ var help =
     "</div>"
 
 var music = 
-    "<p>Hilary Hahn</p>" + 
-    "<p>Polyphia</p>" + 
-    "<p>Billie Eilish</p>" + 
-    "<p>Yvette Young</p>" + 
+    "<p>Hilary Hahn (violin</p>" + 
+    "<p>Polyphia (pop/metal?</p>" + 
+    "<p>Billie Eilish (pop</p>" + 
+    "<p>Yvette Young (math rock</p>" + 
+    "<p>Buckethead (metal</p>" + 
+    "<p>Hiromi Uehara (jazz</p>" + 
+    "<p>Summer Lei (taiwan folk</p>" + 
+    "<p>Suneohair (japan folk/pop?</p>" + 
     "<p>...</p>"
 
 var youtube = 
