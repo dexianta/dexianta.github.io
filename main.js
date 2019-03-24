@@ -24,6 +24,7 @@ var help =
     "<p>music .......... Some great bands or musicians</p>" + 
     "<p>youtube ........ Some great channels you should check out</p>" + 
     "<br>" +
+    "<p>mandel ......... <a href='https://mandel-rust.herokuapp.com'>A fun program</a> I wrote with JS & rust about drawing and zooming in mandelbrot set</p>" + 
     "<p>clear .......... clear screen</p>" + 
     "</div>"
 
