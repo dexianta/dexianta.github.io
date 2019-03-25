@@ -18,13 +18,13 @@ var help =
     "<div class='text'>" +
     "<p>cv ............. Download CV</p>" + 
     "<p>interest ....... His interests</p>" + 
-    "<p>email .......... Email address of dexian tang</p>" + 
+    "<p>contacts ....... contact info</p>" + 
     "<p>instagram ...... Instagram account</p>" + 
     "<p>code ........... Coding related interests</p>" + 
     "<p>music .......... Some great bands or musicians</p>" + 
     "<p>youtube ........ Some great channels you should check out</p>" + 
     "<br>" +
-    "<p>mandel ......... <a href='https://mandel-rust.herokuapp.com'>A fun program</a> I wrote with JS & rust about drawing and zooming in mandelbrot set</p>" + 
+    "<p>demos .......... Small list of (often fun) demos</p>" + 
     "<p>clear .......... clear screen</p>" + 
     "</div>"
 
@@ -45,6 +45,13 @@ var youtube =
     "<p>Jon Gjengset</p>" + 
     "<p>...</p>"
 
+var demos = 
+    "<p><a target='_blank' href='https://mandel-rust.herokuapp.com'> mandelbrot set </a> inspired by an expample from (Programming Rust)</p>"
+
+var contacts = 
+    "<p> out_tang_look@gmail.com(when I'm in China) / maniacalmm@gmail.com</p>" + 
+    "<p> github: maniacalmm </p>"
+
 $('#inputform').submit(function(e) {
     e.preventDefault()
     let inputContent = $("#input-content").val()
@@ -58,8 +65,8 @@ function processCmd(cmd) {
     switch(cmd) {
         case "help":
             return help
-        case "email":
-            return "<p>maniacalmm@gmail.com / out_tang_look@outlook.com</p>"
+        case "contacts":
+            return contacts
         case "instagram":
             return "<p><a target='_blank' href='https://www.instagram.com/tangdxe/'>tangdxe</a></p>"
         case "interest":
@@ -72,6 +79,9 @@ function processCmd(cmd) {
 
         case "youtube":
             return youtube
+
+        case "demos":
+            return demos;
 
         case "clear":
             $("#history").empty()
