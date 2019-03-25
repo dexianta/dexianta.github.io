@@ -9,7 +9,7 @@ var initial_content = [
     "<p>before that, he worked briefly on a marketing platform at a marketing company</p><br>",
 
     "<p>he spent three years @ <a target='_blank' href='http://www.ssc.pe.titech.ac.jp/'>Tokyo Tech</a> building circuits</p>" + 
-    "<p>he evetually pivoted to code and dropped out from grad school with a master degree in Electronic Engineering</p><br>"
+    "<p>he later dropped out from school to pursue software with a master degree in Electronic Engineering</p><br>"
 ]
 
 var commands_cache = []
