@@ -16,11 +16,11 @@ var commands_cache = []
 
 var help =
     "<div class='text'>" +
-    "<p>cv ............. Download CV</p>" + 
     "<p>interest ....... His interests</p>" + 
-    "<p>contacts ....... contact info</p>" + 
-    "<p>instagram ...... Instagram account</p>" + 
     "<p>code ........... Coding related interests</p>" + 
+    "<p>contacts ....... contact info</p>" + 
+    "<br>" +
+    "<p>instagram ...... Instagram account</p>" + 
     "<p>music .......... Some great bands or musicians</p>" + 
     "<p>youtube ........ Some great channels you should check out</p>" + 
     "<br>" +
