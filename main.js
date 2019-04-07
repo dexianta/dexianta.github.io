@@ -49,7 +49,7 @@ var demos =
     "<p><a target='_blank' href='https://mandel-rust.herokuapp.com'>mandelbrot set zoom-in</a> wrote during a long flight, bad mobile support, just for fun</p>"
 
 var contacts = 
-    "<p> out_tang_look@gmail.com(when I'm in China) / maniacalmm@gmail.com</p>" + 
+    "<p> out_tang_look@outlook.com(when I'm in China) / maniacalmm@gmail.com</p>" + 
     "<p> github: maniacalmm </p>"
 
 $('#inputform').submit(function(e) {
