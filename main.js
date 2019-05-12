@@ -4,12 +4,12 @@ var initial_content = [
     `<p>${(new Date()).toString()}</p>` +  
     "<p>hello, stranger<p><br>", 
     
-    "<p>Dexian Tang (唐 德先) is currently a data engineer @ <a target='_blank' href='https://www.yokozunadata.com'>Yokozuna Data</a></p>" + 
-    "<p>where he spending most of his time crunching numbers with spark</p>" + 
-    "<p>before that, he worked briefly on a marketing platform at a marketing company</p><br>",
+    "<p>Dexian Tang (唐 德先) is a data engineer @ <a target='_blank' href='https://www.yokozunadata.com'>Yokozuna Data</a></p>" + 
+    "<p>where he spend most of his time crunching numbers with spark</p>" + 
+    "<p>he worked briefly on a marketing platform at a marketing company</p><br>",
 
     "<p>he spent three years @ <a target='_blank' href='http://www.ssc.pe.titech.ac.jp/'>Tokyo Tech</a> building circuits</p>" + 
-    "<p>he later dropped out from school to pursue software with a master degree in Electronic Engineering</p><br>"
+    "<p>he later dropped out from school to pursue software with a master degree in Electrical Engineering</p><br>"
 ]
 
 var commands_cache = []
@@ -49,7 +49,7 @@ var demos =
     "<p><a target='_blank' href='https://mandel-rust.herokuapp.com'>mandelbrot set zoom-in</a> wrote during a long flight, bad mobile support, just for fun</p>"
 
 var contacts = 
-    "<p> out_tang_look@outlook.com(when I'm in China) / maniacalmm@gmail.com</p>" + 
+    "<p> maniacalmm@gmail.com</p>" + 
     "<p> github: maniacalmm </p>"
 
 $('#inputform').submit(function(e) {
@@ -70,10 +70,10 @@ function processCmd(cmd) {
         case "instagram":
             return "<p><a target='_blank' href='https://www.instagram.com/tangdxe/'>tangdxe</a></p>"
         case "interest":
-            return "<p>photograph, PlayStation(especially quantic dream's work), music, guitar, also code, apparently</p>"
+            return "<p>photograph, PS4(especially quantic dream's work), music, guitar, also code, apparently</p>"
         case "code": 
             return "<p>strong interest in big data, system programming, JVM eco-system</p>" + 
-                    "<p>he spent quite a lot of time recently playing with scala and rust</p>"
+                    "<p>he spent quite most of his free time recently playing with <a target='_blank' href='https://www.rust-lang.org/'>Rust</a></p>"
         case "music":
             return music
 
