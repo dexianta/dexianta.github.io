@@ -5,11 +5,10 @@ var initial_content = [
     "<p>hello, stranger<p><br>", 
     
     "<p>Dexian Tang (唐 德先) is a data engineer @ <a target='_blank' href='https://www.yokozunadata.com'>Yokozuna Data</a></p>" + 
-    "<p>where he spend most of his time crunching numbers with spark</p>" + 
-    "<p>he worked briefly on a marketing platform at a marketing company</p><br>",
+    "<p>Where he spend most of his time build data pipelines for data scientist</p>" + 
 
-    "<p>he spent three years @ <a target='_blank' href='http://www.ssc.pe.titech.ac.jp/'>Tokyo Tech</a> building circuits</p>" + 
-    "<p>he later dropped out from school to pursue software with a master degree in Electrical Engineering</p><br>"
+    "<p>He spent three years @ <a target='_blank' href='http://www.ssc.pe.titech.ac.jp/'>Tokyo Tech</a> building circuits</p>" + 
+    "<p>Later, he dropped out from school to pursue software with a master degree in Electrical Engineering</p><br>"
 ]
 
 var commands_cache = []
@@ -72,8 +71,8 @@ function processCmd(cmd) {
         case "interest":
             return "<p>photograph, PS4(especially quantic dream's work), music, guitar, also code, apparently</p>"
         case "code": 
-            return "<p>strong interest in big data, system programming, JVM eco-system</p>" + 
-                    "<p>he spent quite most of his free time recently playing with <a target='_blank' href='https://www.rust-lang.org/'>Rust</a></p>"
+            return "<p>strong interest in big data, system programming, JVM eco-system.</p>" + 
+                    "<p>he spent most of his free time recently playing with <a target='_blank' href='https://www.rust-lang.org/'>Rust</a></p>"
         case "music":
             return music
 
