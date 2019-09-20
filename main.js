@@ -4,8 +4,8 @@ var initial_content = [
     "<p>hello, stranger<p><br>", 
     
     "<p>Dexian Tang (唐 德先) is a data/ML engineer @ Inditex(owner of Zara)</p>" + 
-	"<p>Before, he was at <a target='_blank' href='https://www.yokozunadata.com'>Yokozuna Data</a></p>" + 
-    "<p>Where he spend most of his time build data pipelines for data scientist</p><br>" + 
+	"<p>Before, he was at <a target='_blank' href='https://www.yokozunadata.com'>Yokozuna Data</a>.</p>" + 
+    "<p>Where he was building recommender system for video games with data scientist</p><br>" + 
 
     "<p>He spent three years @ <a target='_blank' href='http://www.ssc.pe.titech.ac.jp/'>Tokyo Tech</a> building circuits</p>" + 
     "<p>Later, he dropped out from school to pursue software with a master degree in Electrical Engineering</p><br>"
