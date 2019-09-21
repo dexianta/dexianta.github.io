@@ -5,10 +5,10 @@ var initial_content = [
     
     "<p>Dexian Tang (唐 德先) is a data/ML engineer @ Inditex(owner of Zara)</p>" + 
 	"<p>Before, he was at <a target='_blank' href='https://www.yokozunadata.com'>Yokozuna Data</a>.</p>" + 
-    "<p>Where he was building recommender system for video games with data scientist</p><br>" + 
+    "<p>Where he was building recommender system for video games with data scientists.</p><br>" + 
 
-    "<p>He spent three years @ <a target='_blank' href='http://www.ssc.pe.titech.ac.jp/'>Tokyo Tech</a> building circuits</p>" + 
-    "<p>Later, he dropped out from school to pursue software with a master degree in Electrical Engineering</p><br>"
+    "<p>He spent three years @ <a target='_blank' href='http://www.ssc.pe.titech.ac.jp/'>Tokyo Tech</a> building integrated circuits.</p>" + 
+    "<p>Later, he dropped out from grad school to <b><i>CODE</i></b>, with a master degree in Electrical Engineering</p><br>"
 ]
 
 var commands_cache = []
@@ -130,7 +130,7 @@ async function initial_loading() {
         await rotating_bar(Math.random() * 5 + 3);
         $("#inital-loading").append(pp)
     }
-    $("#inital-loading").append("<p>for all available command: type \"help\" </p>")
+    $("#inital-loading").append("<p>for all available command: \"help\" </p>")
     $("#rotating").text("done")
 }
 
