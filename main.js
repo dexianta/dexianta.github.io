@@ -3,7 +3,7 @@ var initial_content = [
     `<p>${(new Date()).toString()}</p>` +  
     "<p>hello, stranger<p><br>", 
     
-    "<p>Dexian Tang is senior software engineer mainly working on building machine learning systems on the cloud</p>" + 
+    "<p>Dexian Tang is a senior software engineer mainly working on building machine learning systems on the cloud</p>" + 
     "<p>He used to work at Inditex(owner of Zara) and <a target='_blank' href='https://www.yokozunadata.com'>Yokozuna Data</a>.</p><br>" + 
 
     "<p>He spent three years @ <a target='_blank' href='http://www.ssc.pe.titech.ac.jp/'>Tokyo Tech</a> building integrated circuits.</p>" + 
