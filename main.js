@@ -22,7 +22,7 @@ var help =
     "<p>music .......... Some great bands or musicians</p>" + 
     "<p>youtube ........ Some great channels you should check out</p>" + 
     "<br>" +
-    "<p>demos .......... Small list of (often fun) demos</p>" + 
+    "<p>code whims......... Small list of (often fun) programs</p>" + 
     "<p>clear .......... clear screen</p>" + 
     "</div>"
 
@@ -33,7 +33,6 @@ var music =
     "<p>Yvette Young (math rock</p>" + 
     "<p>Buckethead (metal</p>" + 
     "<p>Hiromi Uehara (jazz</p>" + 
-    "<p>Summer Lei (taiwan folk</p>" + 
     "<p>Suneohair (japan folk/pop?</p>" + 
     "<p>...</p>"
 
@@ -45,11 +44,11 @@ var youtube =
 
 var demos = 
     "<p><a target='_blank' href='https://mandel-rust.herokuapp.com'>mandelbrot set zoom-in</a> wrote during a long flight, bad mobile support, just for fun</p>" + 
-    "<p><a target='_blank' href='https://biubiuzz.herokuapp.com'>a shooting game</a> wrote on a weekend during the covid19 quarantine with scala.js, gotta admit it's quiet fun to write</p>"
+    "<p><a target='_blank' href='https://biubiuzz.herokuapp.com'>a shooting game</a> (<a target='_blank' href='https://github.com/dexianta/biubiuzz'>code here</a>) wrote on a weekend during the covid19 quarantine with scala.js, it was very fun to write</p>"
 
 var contacts = 
-    "<p> maniacalmm@gmail.com</p>" + 
-    "<p> github: maniacalmm </p>"
+    "<p> dxe.tang@gmail.com</p>" + 
+    "<p> github: dexianta </p>"
 
 $('#inputform').submit(function(e) {
     e.preventDefault()
@@ -79,7 +78,7 @@ function processCmd(cmd) {
         case "youtube":
             return youtube
 
-        case "demos":
+        case "code whims":
             return demos;
 
         case "clear":
