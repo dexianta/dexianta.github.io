@@ -3,8 +3,9 @@ var initial_content = [
     `<p>${(new Date()).toString()}</p>` +  
     "<p>hello, stranger<p><br>", 
     
-    "<p>Dexian Tang is a senior software engineer mainly working on building machine learning systems on the cloud</p>" + 
-    "<p>He used to work at Inditex(owner of Zara) and <a target='_blank' href='https://www.yokozunadata.com'>Yokozuna Data</a>.</p><br>" + 
+    "<p>I'm a passionate software engineer who just find manipulating bytes in memory fascinating</p>" + 
+    "<p>Currently I'm the head of engineering at <a target='_blank' href='https://www.benshi.ai'>benshi.ai</a> (we're hiring!)</p>" +
+    "<p>He used to work at Inditex (owner of Zara) and <a target='_blank' href='https://www.yokozunadata.com'>Yokozuna Data</a>.</p><br>" + 
 
     "<p>He spent three years @ <a target='_blank' href='http://www.ssc.pe.titech.ac.jp/'>Tokyo Tech</a> building integrated circuits.</p>" + 
     "<p>Later, he dropped out from grad school to <b><i>CODE</i></b>, with a master degree in Electrical Engineering</p><br>"
@@ -71,7 +72,7 @@ function processCmd(cmd) {
             return "<p>photograph, PS4(especially quantic dream's work), music, guitar, also code, apparently</p>"
         case "code": 
             return "<p>strong interest in big data, system programming, JVM eco-system.</p>" + 
-                    "<p>he spent most of his free time recently playing with <a target='_blank' href='https://www.rust-lang.org/'>Rust</a></p>"
+                   "<p>he spent most of his free time recently playing with <a target='_blank' href='https://www.rust-lang.org/'>Rust</a> and Golang</p>"
         case "music":
             return music
 
