@@ -1,11 +1,11 @@
 var initial_content = [
     "<p><strike>barebone terminal (v0.0.1)</strike><p>" + 
-    `<p>${(new Date()).toString()}</p>` +  
+    `<p id="time" class="text">${(new Date()).toString()}</p>` +  
     "<p>hello, stranger<p><br>", 
     
     "<p>I'm a passionate software engineer who just find manipulating bytes in memory fascinating</p>" + 
     "<p>Currently I'm the head of engineering at <a target='_blank' href='https://www.benshi.ai'>benshi.ai</a> (we're hiring!)</p>" +
-    "<p>I used to work at Inditex (owner of Zara) and <a target='_blank' href='https://www.yokozunadata.com'>Yokozuna Data</a>.</p><br>" + 
+    "<p>I used to work at Inditex (owner of <a target='_blank' href='https://www.zara.com/'>Zara</a>) and <a target='_blank' href='https://www.yokozunadata.com'>Yokozuna Data</a>.</p><br>" + 
 
     "<p>I spent three years @ <a target='_blank' href='http://www.ssc.pe.titech.ac.jp/'>Tokyo Tech</a> building integrated circuits.</p>" + 
     "<p>Later, I dropped out from grad school to <b><i>CODE</i></b></p><br>"
@@ -133,5 +133,9 @@ async function initial_loading() {
     $("#inital-loading").append("<p>for all available command: \"help\" </p>")
     $("#rotating").text("done")
 }
+
+setInterval(() => {
+    $("#time").html((new Date()).toString())
+}, 1000)
 
 initial_loading()
