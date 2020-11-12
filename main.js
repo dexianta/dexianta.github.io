@@ -5,10 +5,10 @@ var initial_content = [
     
     "<p>I'm a passionate software engineer who just find manipulating bytes in memory fascinating</p>" + 
     "<p>Currently I'm the head of engineering at <a target='_blank' href='https://www.benshi.ai'>benshi.ai</a> (we're hiring!)</p>" +
-    "<p>He used to work at Inditex (owner of Zara) and <a target='_blank' href='https://www.yokozunadata.com'>Yokozuna Data</a>.</p><br>" + 
+    "<p>I used to work at Inditex (owner of Zara) and <a target='_blank' href='https://www.yokozunadata.com'>Yokozuna Data</a>.</p><br>" + 
 
-    "<p>He spent three years @ <a target='_blank' href='http://www.ssc.pe.titech.ac.jp/'>Tokyo Tech</a> building integrated circuits.</p>" + 
-    "<p>Later, he dropped out from grad school to <b><i>CODE</i></b>, with a master degree in Electrical Engineering</p><br>"
+    "<p>I spent three years @ <a target='_blank' href='http://www.ssc.pe.titech.ac.jp/'>Tokyo Tech</a> building integrated circuits.</p>" + 
+    "<p>Later, I dropped out from grad school to <b><i>CODE</i></b></p><br>"
 ]
 
 var commands_cache = []
