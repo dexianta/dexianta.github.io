@@ -3,8 +3,8 @@ var initial_content = [
     `<p id="time" class="text">${(new Date()).toString()}</p>` +  
     "<p>hello, stranger<p><br>", 
     
-    "<p>I'm a passionate software engineer who just find manipulating bytes in memory fascinating</p>" + 
-    "<p>Currently I'm the head of engineering at <a target='_blank' href='https://www.benshi.ai'>benshi.ai</a> (we're hiring!)</p>" +
+    "<p>I'm a software engineer that enjoys work on a wide range of things, my main passion are in system programming and low-latency data system</p>" + 
+    "<p>Currently I'm the CTO at <a target='_blank' href='https://www.benshi.ai'>benshi.ai</a> (we're hiring!)</p>" +
     "<p>I used to work at Inditex (owner of <a target='_blank' href='https://www.zara.com/'>Zara</a>) and <a target='_blank' href='https://www.yokozunadata.com'>Yokozuna Data</a>.</p><br>" + 
 
     "<p>I spent three years @ <a target='_blank' href='http://www.ssc.pe.titech.ac.jp/'>Tokyo Tech</a> building integrated circuits.</p>" + 
@@ -71,8 +71,8 @@ function processCmd(cmd) {
         case "interest":
             return "<p>photograph, PS4(especially quantic dream's work), music, guitar, also code, apparently</p>"
         case "code": 
-            return "<p>strong interest in big data, system programming, JVM eco-system.</p>" + 
-                   "<p>he spent most of his free time recently playing with <a target='_blank' href='https://www.rust-lang.org/'>Rust</a> and Golang</p>"
+            return "<p>strong interest in data system, system programming, <s>JVM eco-system</s></p>" + 
+                   "<p>I spent most of my free time recently tinkering with <a target='_blank' href='https://www.rust-lang.org/'>Rust</a> and Golang</p>"
         case "music":
             return music
 
