@@ -3,7 +3,7 @@ var initial_content = [
     `<p id="time" class="text">${(new Date()).toString()}</p>` +  
     "<p>hello, stranger<p><br>", 
     
-    "<p>I'm a software engineer that enjoys work on a wide range of things, my main passion are in system programming and low-latency data system</p>" + 
+    "<p>I'm a software engineer who enjoys working on a wide range of things. My main passion is in system programming and low-latency data system.</p>" + 
     "<p>Currently I'm the CTO at <a target='_blank' href='https://www.benshi.ai'>benshi.ai</a> (we're hiring!)</p>" +
     "<p>I used to work at Inditex (owner of <a target='_blank' href='https://www.zara.com/'>Zara</a>) and <a target='_blank' href='https://www.yokozunadata.com'>Yokozuna Data</a>.</p><br>" + 
 
