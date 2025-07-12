@@ -31,7 +31,7 @@ const lowerRightSidePos = (width, height) => {
 }
 
 const speed = (range) => {
-  const r = range * Math.random() * (0.001 - 0.0005) + 0.0005;
+  const r = range * Math.random() * (0.0012 - 0.0008) + 0.0005;
   if (Math.random() > 0.5) {
     return -r
   }
@@ -54,6 +54,9 @@ const objGen = (type, pos, w, h) => {
     case 'um':
       [x, y] = upperMiddle(w, h)
       break;
+    case 'rand':
+      x = Math.random() * w * 0.9 + objSize
+      y = Math.random() * h * 0.9 + objSize
   }
 
   return {
@@ -149,5 +152,17 @@ function loop() {
   draw();
   requestAnimationFrame(loop);
 }
+
+document.getElementById('add-rock').addEventListener('click', () => {
+  objs.push(objGen(rock, 'rand', w, h))
+});
+
+document.getElementById('add-paper').addEventListener('click', () => {
+  objs.push(objGen(paper, 'rand', w, h))
+});
+
+document.getElementById('add-scissors').addEventListener('click', () => {
+  objs.push(objGen(scissors, 'rand', w, h))
+});
 
 loop();

@@ -5,6 +5,38 @@
   <meta charset="utf-8">
   <title>Rock Paper Scissors</title>
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
+  <style>
+    #control-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 10;
+    }
+
+    #control-buttons button {
+      font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+      font-size: 15px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 10px;
+      background: #2b2b2b;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+
+    #control-buttons button:hover {
+      background: #3d3d3d;
+    }
+
+    #control-buttons button:active {
+      transform: scale(0.98);
+    }
+  </style>
 </head>
 
 <body>
@@ -12,6 +44,12 @@
 
   <div style="margin-top:20px">
     <a href="main.html" style="color:white">Back to Terminal</a>
+  </div>
+
+  <div id="control-buttons">
+    <button id="add-rock">Add 🪨</button>
+    <button id="add-paper">Add 📄</button>
+    <button id="add-scissors">Add ✂️</button>
   </div>
 
   <script src="rock_paper.js"></script>
