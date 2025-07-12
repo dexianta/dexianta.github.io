@@ -2,11 +2,15 @@ const canvas = document.getElementById("game-canvas");
 const ctx = canvas.getContext("2d");
 let grid = {};
 
+const w = window.innerWidth
+const h = window.innerHeight
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const objSize = 20
-const gridSize = 40
+const objSize = Math.max(canvas.height, canvas.width) * 0.03
+console.log(objSize)
+const gridSize = objSize * 3
 
 const rock = 'rock'
 const paper = 'paper'
@@ -26,8 +30,8 @@ const lowerRightSidePos = (width, height) => {
   return [(0.9 * width) - randUnit(), (0.9 * height + randUnit()) - objSize * 2]
 }
 
-const speed = () => {
-  const r = Math.random() * (0.4 - 0.2) + 0.3;
+const speed = (range) => {
+  const r = range * Math.random() * (0.001 - 0.0005) + 0.0005;
   if (Math.random() > 0.5) {
     return -r
   }
@@ -38,13 +42,11 @@ const speed = () => {
 const objGen = (type, pos, w, h) => {
   let x = 0;
   let y = 0;
-  let vx = speed();
-  let vy = speed();
+  let vx = speed(w);
+  let vy = speed(h);
   switch (pos) {
     case 'll':
       [x, y] = lowerLeftStartPos(w, h)
-      //vx = vx > 0 ? vx : -vx
-      //vy = vy < 0 ? vx : -vx
       break;
     case 'lr':
       [x, y] = lowerRightSidePos(w, h)
@@ -66,20 +68,20 @@ const objGen = (type, pos, w, h) => {
 
 const objs = [];
 for (let i = 0; i < 20; i++) {
-  objs.push(objGen('rock', 'll', canvas.width, canvas.height))
-  objs.push(objGen('paper', 'lr', canvas.width, canvas.height))
-  objs.push(objGen('scissors', 'um', canvas.width, canvas.height))
+  objs.push(objGen(rock, 'll', canvas.width, canvas.height))
+  objs.push(objGen(paper, 'lr', canvas.width, canvas.height))
+  objs.push(objGen(scissors, 'um', canvas.width, canvas.height))
 }
-
-console.log(objs)
 
 function drawObject(ctx, obj) {
   let emoji = "❓";
-  if (obj.type === "rock") emoji = "🪨";      // rock emoji (not all browsers support)
-  if (obj.type === "paper") emoji = "📄";
-  if (obj.type === "scissors") emoji = "✂️";
+  if (obj.type === rock) emoji = "🪨";      // rock emoji (not all browsers support)
+  if (obj.type === paper) emoji = "📄";
+  if (obj.type === scissors) emoji = "✂️";
 
-  ctx.font = `${obj.size * 2}px sans-serif`;
+  ctx.font = `${obj.size}px sans-serif`;
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
   ctx.fillText(emoji, obj.x, obj.y);
 }
 
@@ -87,8 +89,8 @@ function update() {
   for (let i = 0; i < objs.length; i++) {
     objs[i].x += objs[i].vx;
     objs[i].y += objs[i].vy;
-    if (objs[i].x < 0 || objs[i].x > canvas.width - objs[i].size - 2) objs[i].vx *= -1;
-    if (objs[i].y < 0 || objs[i].y > canvas.height - objs[i].size - 2) objs[i].vy *= -1;
+    if (objs[i].x < objSize || objs[i].x > canvas.width - objSize) objs[i].vx *= -1;
+    if (objs[i].y < objSize || objs[i].y > canvas.height - objSize) objs[i].vy *= -1;
 
     const gx = Math.floor(objs[i].x / gridSize)
     const gy = Math.floor(objs[i].y / gridSize)
@@ -116,15 +118,15 @@ function checkCollision() {
             for (const another of neighbors) {
               if (obj === another) continue;
               const dist = (obj.x - another.x) ** 2 + (obj.y - another.y) ** 2
-              if (dist < 280 && obj.type != another.type) {
+              if (dist < objSize ** 2 && obj.type != another.type) {
                 if (obj.type == rock && another.type == paper) {
                   objs[i].type = paper
                 }
-                if (obj.type == rock && another.type == scissors) {
-                  another.type = rock
+                if (obj.type == scissors && another.type == rock) {
+                  objs[i].type = rock
                 }
-                if (obj.type == scissors && another.type == paper) {
-                  another.type = scissors
+                if (obj.type == paper && another.type == scissors) {
+                  objs[i].type = scissors
                 }
               }
             }

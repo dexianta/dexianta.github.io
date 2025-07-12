@@ -14,7 +14,7 @@ var help =
   "<p>clear    ....... clear screen</p>" +
   "</div>"
 
-var demos =
+var misc =
   "<p><a target='_blank' href='rock_paper.html'>Rock Paper Scissors</p>"
 
 var contacts =
@@ -39,8 +39,8 @@ function processCmd(cmd) {
     case "bio":
       return
 
-    case "fun":
-      return demos;
+    case "misc":
+      return misc;
 
     case "clear":
       $("#history").empty()
