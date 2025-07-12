@@ -12,6 +12,7 @@ const objSize = Math.max(canvas.height, canvas.width) * 0.03
 console.log(objSize)
 const gridSize = objSize * 3
 
+let speedRatio = 1
 const rock = 'rock'
 const paper = 'paper'
 const scissors = 'scissors'
@@ -163,6 +164,14 @@ document.getElementById('add-paper').addEventListener('click', () => {
 
 document.getElementById('add-scissors').addEventListener('click', () => {
   objs.push(objGen(scissors, 'rand', w, h))
+});
+
+document.getElementById('speed-up').addEventListener('click', () => {
+  objs.forEach((_, i) => { objs[i].vx *= 1.1; objs[i].vy *= 1.1 })
+});
+
+document.getElementById('slow-down').addEventListener('click', () => {
+  objs.forEach((_, i) => { objs[i].vx *= 0.9; objs[i].vy *= 0.9 })
 });
 
 loop();
